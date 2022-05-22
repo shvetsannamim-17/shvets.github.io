@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<meta charset="utf-8">
- 	<title>Завдання п'ятого тижня</title>
+ 	
 
  <script src="https://aframe.io/releases/1.2.0/aframe.min.js">  </script>
  <script src="AR.js-master/aframe/build/aframe-ar.js"> </script>
@@ -31,11 +31,10 @@
   		matrixCodeType: 3x3;"> 
 	
 		<a-marker preset="hiro" registerevents id="Hiro">
-			<!-- <a-box position="0 0.5 0" material="color: red; "> </a-box> -->
 			<a-entity geometry="primitive: box; height: 1; width: 1; depth: 1;" 
 				  position="0 0.5 0" material="color: red; " jump> </a-box>
 			<a-entity position="0 0 1" particle-system="preset: rain; 
-				  size: 5; color:yellow;"></a-entity> 
+				  size: 5; color: blue;"></a-entity> 
 		</a-marker>
 
 		<a-marker preset="kanji" registerevents id="kanji">
@@ -54,9 +53,9 @@
 		</a-marker>
 
 		<a-marker type='pattern' url="pattern-anna.patt" registerevents id="anna"> 
-			<a-entity geometry="primitive: box" material="color: purple"
+			<a-entity geometry="primitive: box" material="color: #ff6666"
 				animation__mouseenter="property: rotation; from:0 0 0; to: 0 0 360; startEvents: mouseenter; dur: 1000;" 
-				animation__mouseleave="property: components.material.material.color; type: color; from: red; to: purple; startEvents: mouseleave; dur: 1000;" jump> </a-entity>
+				animation__mouseleave="property: components.material.material.color; type: color; from: #ff6666; to: #006600; startEvents: mouseleave; dur: 1000;" jump> </a-entity>
 
 				<a-torus-knot position="-2 0 0" color="green" radius="0.6" radius-tubular="0.15" 
 						p="2" q="7" animation="property: rotation; to: 90 180 360; dur: 10000; easing: linear; loop: true" jump> </a-torus-knot>
