@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-    <title>Шостий тиждень</title>
-
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="AR.js-master/aframe/build/aframe-ar.js"></script>
     <script type=" text/javascript">
@@ -32,7 +30,7 @@
                 this.p3 = new THREE.Vector3();
                 this.p4 = new THREE.Vector3();
 
-                let material = new THREE.MeshLambertMaterial({color:0xFF0000});
+                let material = new THREE.MeshLambertMaterial({color:0x008000});
                 let geometry=new THREE.CylinderGeometry( 0.05, 0.05, 1, 12);
                 geometry.applyMatrix( new THREE.Matrix4().makeTranslation(0, 0.5, 0 ) );
                 geometry.applyMatrix( new THREE.Matrix4().makeRotationX(THREE.Math.degToRad( 90 ) ) );
@@ -55,7 +53,7 @@
                 this.cylinderDF = new THREE.Mesh( geometry, material );
                 this.lineDF = document.querySelector('#lineDF').object3D;
                 this.lineDF.add( this.cylinderDF );
-                this.cylinderDF.visible = false;
+                this.cylinderDF.visible = false; 
 
                 this.cylinderFA = new THREE.Mesh( geometry, material );
                 this.lineFA = document.querySelector('#lineFA').object3D;
