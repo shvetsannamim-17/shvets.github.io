@@ -10,16 +10,22 @@
 	
 	<a-marker preset="hiro">
 		
-		<a-box position="0 0.5 0" scale="1 1 1" material='color: red;'> </a-box>
-		<a-torus position="-1 1 0" color="purple" radius="0.4"
-			 animation="property: rotation; to: 360 360 360; loop: true; dur: 7000"> </a-torus>
-		<a-plane width="1" height="1" rotation="-90 0 0"
-			 position="0 0 -1" color="#ff66cc"> </a-plane>
-		
-		<a-text rotation="-90 0 0" color='orange' width="10" position="-1 0 0.75"
-			 value="Bye, Cruel World!"
-			 animation="property: position; to: 1 0 0.75; loop: true; dur: 10000"
-			 > </a-text>
+		<a-sky color="#0099cc"
+		    animation="property: components.material.material.color;
+			type: color; from: #0033cc; to: #ffffff; loop: true; dur: 4000"> </a-sky>
+		<a-torus animation="property: position; to: 2 1 -5; dur: 5000; easing: 		linear; loop: false" position="-2 1 -5" color="yellow" radius="1.2"> </a-torus>
+		<a-cylinder color="yellow" height="1.9" radius="0.05"
+			 position="-2 -1 -5" > </a-cylinder>
+		<a-cylinder color="blue" height="2" radius="0.05"
+			 position="-3 -1 -5"> </a-cylinder>
+		<a-torus-knot position="-3 1 -5" color="red" radius="1.2"
+			 radius-tubular="0.15" p="2" q="7"> </a-torus-knot>
+		<a-plane width="9" height="2" position="3 1 -9"> </a-plane>
+		<a-image src="tecture.jpg" width="7" height="7" rotation="-55 0 0"
+			 position="-2 -2 -5"></a-image> 
+		<a-text color='black' width="10" position="-0.5 1 -6.2"
+			 animation="property: rotation; to: 0 270 0; loop: true; dur: 4000"
+			 value="Швець Ганна" font="40857_VTCSwitchbladeRomanceShadowed-msdf.json" negate="false"> </a-text>
 	</a-marker>
 	<a-entity camera> </a-entity>
 	</a-scene>
